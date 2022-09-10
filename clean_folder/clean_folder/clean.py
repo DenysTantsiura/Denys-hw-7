@@ -153,7 +153,7 @@ def archives_sorterer(current_arch: pathlib.Path, main_directory: pathlib.Path):
     try:
         shutil.unpack_archive(str(current_arch.absolute()),
                               str(arch_dir.absolute()))
-    except:
+    except:  # no file? is the file  not the archive? no free space for unpack? eny else?
         print('Error while unpacking archive. Wrong archive?')
         arch_dir.rmdir()
         return False
@@ -178,7 +178,7 @@ def delete_empty_dir(dir_in: pathlib.Path):  # pathlib.Path
                 delete_empty_dir(fs_obj)
                 try:
                     fs_obj.rmdir()  # if empty - silent removal
-                except:  # ... else if... what Error? and else?
+                except:  # FileNotFoundError... else if... what Error? no permission to delete? eny else?
                     # chek and normalize # pathlib.Path, pathlib.Path -> str: new_name_dir
                     new_name_dir = check_new_names(dir_in, fs_obj)
                     fs_obj.replace(dir_in.joinpath(new_name_dir))
