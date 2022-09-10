@@ -162,6 +162,10 @@ def archives_sorterer(current_arch: pathlib.Path, main_directory: pathlib.Path):
     # return True
 
 
+def fun_print_author():  # for simple testing home-task module 7
+    print("Created: Denys TANTSIURA\n")
+
+
 def delete_empty_dir(dir_in: pathlib.Path):  # pathlib.Path
     """
     run recursive listing of directories to remove empty-dir or normalize, if else
