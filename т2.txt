@@ -1,0 +1,10 @@
+Дякую. Щодо домашки модуля 7:
+1) То краще замість "from clean_folder import *" використати записи з setup.py ? :
+
+from clean_folder.type_extensions import data_base_of_extensions, main_directories
+from clean_folder.norma import normalization_scheme, normalize
+from clean_folder.variables import *
+
+2) Тобто достатньо вказати батьківський клас, і це завжди буде коректно для анотації типів у функціях?
+
+3) Так, інколи не встигаю друкувати за думками :)

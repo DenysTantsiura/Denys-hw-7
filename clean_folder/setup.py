@@ -10,12 +10,12 @@ setup(name='clean_folder',
       license='MIT',
       packages=find_namespace_packages(),
       # install_requires=['logging', 'sys', 'shutil'],
-      ## install_requires=['c_exten', 'norma'],
+      ## install_requires=['type_extensions', 'norma'],
       entry_points={'console_scripts': ['clean-folder = clean_folder.clean:main', 'i = clean_folder.clean:fun_print_author']})
 """
 The package is installed in the system by the command:
- pip install -e
-  . (or :
-  python setup.py install
-  , administrator rights are required!)
+ pip install -e . 
+ (or :
+python setup.py install
+, administrator rights are required!)
 """

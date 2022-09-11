@@ -1,0 +1,4 @@
+[console_scripts]
+clean-folder = clean_folder.clean:main
+i = clean_folder.clean:fun_print_author
+

@@ -9,10 +9,13 @@ Run example:
 import sys
 import pathlib
 import shutil
-from clean_folder import *
-
+from clean_folder.type_extensions import data_base_of_extensions, main_directories
+from clean_folder.norma import normalization_scheme, normalize
+from clean_folder.variables import known_extensions, unknown_extensions, images, documents, audio, video, archives
 
 # ?: 'pathlib.Path'  OR : 'pathlib.WindowsPath or pathlib.PosixPath' ?
+
+
 def test_extensions(var_exts: str, current_fs_obj: pathlib.Path):
     '''
     to check file extension and filling file listings
@@ -178,7 +181,7 @@ def delete_empty_dir(dir_in: pathlib.Path):  # pathlib.Path
                 delete_empty_dir(fs_obj)
                 try:
                     fs_obj.rmdir()  # if empty - silent removal
-                except:  # FileNotFoundError... else if... what Error? no permission to delete? eny else?
+                except:  # FileNotFoundError... else if... what Error? no permission to delete? eny else? ... as error
                     # chek and normalize # pathlib.Path, pathlib.Path -> str: new_name_dir
                     new_name_dir = check_new_names(dir_in, fs_obj)
                     fs_obj.replace(dir_in.joinpath(new_name_dir))
