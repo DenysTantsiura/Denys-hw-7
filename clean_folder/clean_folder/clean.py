@@ -166,7 +166,7 @@ def archives_sorterer(current_arch: pathlib.Path, main_directory: pathlib.Path):
 
 
 def fun_print_author():  # for simple testing home-task module 7
-    print("Created: Denys TANTSIURA\n")
+    print(" Junk Sorter created by Denys TANTSIURA\n")
 
 
 def delete_empty_dir(dir_in: pathlib.Path):  # pathlib.Path
